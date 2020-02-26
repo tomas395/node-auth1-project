@@ -12,11 +12,13 @@ const sessionsConfig = {
   secret: "something to do with the void century",
   resave: false,
   saveUninitialized: true, // related to GDPR compliance
+
   cookie: {
     maxAge: 1000 * 30,
     secure: false, // should be true in production
     httpOnly: true // true means JS can't touch the cookie
   },
+
   // remember the new keyword
   store: new KnexStore({
     knex,
